@@ -1,0 +1,118 @@
+/****************************************:
+
+works
+
+*****************************************:*/
+@use "../global/index" as g;
+
+.works-subtitle::before,
+.works-subtitle::after {
+  width: 22%;
+}
+
+.works-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.works-content-img {
+  object-fit: cover;
+  margin-bottom: 24px;
+  height: 160px;
+
+  @include g.mq(md) {
+    height: 200px;
+  }
+  @include g.mq(sm) {
+    height: 136px;
+    margin-bottom: 20px;
+  }
+}
+
+.works-content-text {
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 1.7;
+  padding-left: 12px;
+
+  &:not(:nth-of-type(4)) {
+    margin-bottom: 16px;
+  }
+}
+
+// slick
+.slider {
+  opacity: 0;
+  transition: 2s;
+}
+
+.slick-initialized {
+  opacity: 1;
+}
+
+.slick-slide {
+  padding: 8px;
+
+  @include g.mq(sm) {
+    padding: 4px;
+  }
+}
+// 矢印
+.slick-arrow {
+  top: 50%;
+
+  @include g.mq(sm) {
+    top: 20%;
+  }
+
+  &::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+
+    @include g.mq(sm) {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
+
+.slick-prev {
+  left: -8%;
+
+  @include g.mq(sm) {
+    z-index: 1;
+    left: 10px;
+  }
+
+  &::before {
+    border-top: 5px solid var(--base-white);
+    border-left: 5px solid var(--base-white);
+    transform: translateX(-50%) scaleY(0.8) rotate(-45deg);
+  }
+}
+
+.slick-next {
+  right: -8%;
+
+  @include g.mq(sm) {
+    right: 10px;
+  }
+
+  &::before {
+    border-top: 5px solid var(--base-white);
+    border-right: 5px solid var(--base-white);
+    transform: translateX(-50%) scaleY(0.8) rotate(45deg);
+  }
+}
+// ドット
+.slick-dots li button:before {
+  color: var(--base-white);
+  opacity: 0.5;
+}
+
+.slick-dots li.slick-active button:before {
+  color: var(--base-white);
+  opacity: 1;
+}

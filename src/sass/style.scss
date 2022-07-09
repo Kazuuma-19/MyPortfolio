@@ -1,0 +1,15 @@
+@charset 'utf-8';
+
+// 各スタイル読み込み
+@use "foundation"; //ベーススタイル用
+@use "component"; //パーツ読み込み用
+@use "animation"; //パーツ読み込み用
+@use "layout/header"; //header用
+@use "layout/container"; //container用
+@use "layout/cta"; //cta用
+@use "layout/mv"; //mv用
+@use "layout/promise"; //concept用
+@use "layout/works"; //feature用
+@use "layout/profile"; //service用
+@use "layout/contact"; //contact用
+@use "layout/footer"; //footer用

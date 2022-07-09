@@ -1,0 +1,151 @@
+/****************************************:
+
+profile
+
+*****************************************:*/
+@use "../global/index" as g;
+
+.profile-subtitle {
+  &::before,
+  &::after {
+    width: 20%;
+  }
+}
+
+.profile-wrapper {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+
+  @include g.mq(lg) {
+    display: block;
+  }
+}
+
+.profile-content {
+  width: 50%;
+  padding: 32px;
+
+  @include g.mq(lg) {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 32px 96px;
+    margin-bottom: 40px;
+  }
+  @include g.mq(md) {
+    padding: 32px 24px;
+  }
+  @include g.mq(sm) {
+    padding: 24px;
+  }
+}
+
+.profile-content-title {
+  font-family: "Noto Serif", serif;
+  font-style: italic;
+  font-size: 2.5rem;
+  margin-bottom: 32px;
+
+  @include g.mq(sm) {
+    margin-bottom: 24px;
+  }
+}
+
+.profile-content-explain {
+  font-family: "Noto Sans JP", sans-serif;
+}
+.profile-about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.profile-about-image {
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 40%;
+
+  @include g.mq(sm) {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.profile-name {
+  font-size: 1.5rem;
+  margin-left: 16px;
+
+  @include g.mq(sm) {
+    font-size: 1rem;
+  }
+}
+
+.profile-name-jp {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.profile-name-en {
+  font-family: "Noto Serif", serif;
+  font-style: italic;
+}
+
+.profile-twitter {
+  display: block;
+  margin-left: 8px;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.profile-twitter-icon {
+  width: auto;
+}
+
+.profile-detail {
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 1.7;
+  text-align: left;
+  padding: 0;
+  padding-left: 8px;
+
+  &:not(:nth-of-type(3)) {
+    margin-bottom: 8px;
+  }
+  &:before {
+    width: 3px;
+    height: 15px;
+    top: 6px;
+  }
+}
+
+.profile-skill {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.profile-skill-language {
+  font-family: "Noto Serif", serif;
+  font-style: italic;
+  width: 35%;
+  margin-bottom: 8px;
+
+  @include g.mq(lg) {
+    width: 40%;
+  }
+}
+
+.profile-skill-icon {
+  width: 90px;
+  height: 90px;
+
+  @include g.mq(sm) {
+    width: 60px;
+    height: 60px;
+  }
+}

@@ -1,0 +1,41 @@
+/****************************************:
+
+縦線あしらい
+
+*****************************************:*/
+
+.c-horizontal-bar {
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    height: 1px;
+    position: absolute;
+    top: 50%;
+  }
+  &::before {
+    left: 0;
+  }
+  &::after {
+    right: 0;
+  }
+}
+
+.c-horizontal-bar--bgwhite {
+  &::before {
+    background: var(--base-black);
+  }
+  &::after {
+    background: var(--base-black);
+  }
+}
+
+.c-horizontal-bar--bgblack {
+  &::before {
+    background: var(--main-green);
+  }
+  &::after {
+    background: var(--main-green);
+  }
+}

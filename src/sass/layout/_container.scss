@@ -1,0 +1,26 @@
+/****************************************:
+
+container
+
+*****************************************:*/
+@use "../global/index" as g;
+
+.container {
+  max-width: 966px;
+  padding: 136px 0;
+  margin: 0 auto;
+
+  @include g.mq(xl) {
+    max-width: 800px;
+  }
+  @include g.mq(lg) {
+    max-width: 600px;
+  }
+  @include g.mq(md) {
+    max-width: 410px;
+    padding: 64px 0;
+  }
+  @include g.mq(sm) {
+    max-width: 270px;
+  }
+}

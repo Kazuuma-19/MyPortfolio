@@ -1,0 +1,61 @@
+/****************************************:
+
+セクションタイトル
+
+*****************************************:*/
+@use "../global/index" as g;
+
+// 全体
+.c-title-wrapper {
+  text-align: right;
+}
+
+.c-title-content {
+  display: inline-block;
+  margin-bottom: 80px;
+
+  @include g.mq(md) {
+    margin-bottom: 56px;
+  }
+  @include g.mq(sm) {
+    margin-bottom: 48px;
+  }
+}
+
+// タイトル
+.c-section-title {
+  font-family: "Noto Serif", serif;
+  font-style: italic;
+  font-size: 4.5rem;
+  margin-bottom: 4px;
+
+  @include g.mq(md) {
+    font-size: 3.5rem;
+  }
+  @include g.mq(sm) {
+    font-size: 3rem;
+  }
+}
+.c-section-title--bgwhite {
+  color: var(--main-green);
+}
+.c-section-title--bgblack {
+  color: var(--base-white);
+}
+
+// サブタイトル
+.c-section-subtitle {
+  font-family: "Noto Serif JP", serif;
+  font-size: 2rem;
+  text-align: center;
+
+  @include g.mq(sm) {
+    font-size: 1.5rem;
+  }
+}
+.c-section-subtitle--bgwhite {
+  color: var(--base-black);
+}
+.c-section-subtitle--bgblack {
+  color: var(--main-green);
+}

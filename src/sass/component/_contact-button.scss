@@ -1,0 +1,62 @@
+/****************************************:
+
+お問い合わせボタン
+
+*****************************************:*/
+
+@use "../global/index" as g;
+
+.c-button {
+  color: var(--base-white);
+  background: linear-gradient(
+    135deg,
+    rgba(229, 45, 39, 0.9) 50%,
+    rgba(179, 18, 23, 0.9)
+  );
+  font-size: 2rem;
+  box-sizing: border-box;
+  width: 416px;
+  line-height: 1;
+  border-radius: 9999px;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  position: relative;
+  padding: 32px;
+  margin: 0 auto;
+
+  @include g.mq(md) {
+    font-size: 1.5rem;
+    width: 368px;
+    padding: 32px;
+  }
+  @include g.mq(sm) {
+    font-size: 1.3rem;
+    width: 270px;
+    padding: 20px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+  &::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-top: 3px solid var(--base-white);
+    border-right: 3px solid var(--base-white);
+    position: absolute;
+    top: 50%;
+    right: 65px;
+    transform: translateY(-50%) scaleY(0.8) rotate(45deg);
+
+    @include g.mq(md) {
+      width: 10px;
+      height: 10px;
+      right: 40px;
+    }
+    @include g.mq(sm) {
+      right: 35px;
+    }
+  }
+}

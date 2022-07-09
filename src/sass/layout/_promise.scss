@@ -1,0 +1,109 @@
+/****************************************:
+
+feature
+
+*****************************************:*/
+@use "../global/index" as g;
+
+.promise-subtitle::before,
+.promise-subtitle::after {
+  width: 30%;
+}
+
+.promise-content {
+  padding: 32px 40px;
+
+  &:not(:nth-of-type(3)) {
+    margin-bottom: 48px;
+
+    @include g.mq(md) {
+      margin-bottom: 24px;
+    }
+  }
+
+  @include g.mq(md) {
+    padding: 24px 32px;
+  }
+  @include g.mq(sm) {
+    padding: 24px;
+  }
+}
+
+.promise-detail {
+  position: relative;
+
+  &::before {
+    counter-increment: number 1;
+    content: counter(number);
+    font-family: "Noto Serif", serif;
+    font-style: italic;
+    font-size: 3rem;
+    color: #fff;
+    background: var(--main-green);
+    display: inline-block;
+    width: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+
+    @include g.mq(md) {
+      font-size: 1.5rem;
+      width: 40px;
+      line-height: 40px;
+      top: 15px;
+    }
+  }
+}
+
+.promise-content-title {
+  display: flex;
+  margin-left: 120px;
+  margin-bottom: 24px;
+
+  @include g.mq(lg) {
+    margin-left: 104px;
+  }
+  @include g.mq(md) {
+    display: block;
+    text-align: center;
+    margin-left: 0;
+  }
+}
+
+.promise-content-icon {
+  width: 50px;
+  height: 50px;
+
+  @include g.mq(md) {
+    margin-bottom: 8px;
+  }
+}
+
+.promise-content-text {
+  font-family: "Noto Serif JP", serif;
+  font-size: 2.5rem;
+  margin-left: 16px;
+
+  @include g.mq(md) {
+    font-size: 2rem;
+    margin-left: 0;
+  }
+}
+
+.promise-content-explain {
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 1.7;
+  margin-left: 120px;
+
+  @include g.mq(lg) {
+    margin-left: 104px;
+  }
+  @include g.mq(md) {
+    margin-left: 0;
+  }
+}

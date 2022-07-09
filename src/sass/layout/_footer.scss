@@ -1,0 +1,82 @@
+/****************************************:
+
+footer
+
+*****************************************:*/
+@use "../global/index" as g;
+
+.footer {
+  font-family: "Noto Serif", serif;
+  font-style: italic;
+  color: var(--base-white);
+  background: var(--base-black);
+
+  @include g.mq(md) {
+    padding: 56px 0;
+  }
+  @include g.mq(sm) {
+    padding: 40px 0;
+  }
+}
+.footer-logo {
+  margin-bottom: 80px;
+}
+.footer-wrapper {
+  border-bottom: 1px solid var(--base-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.footer-item-link {
+  color: var(--base-white);
+  position: relative;
+
+  &::after {
+    content: "";
+    background: var(--base-white);
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scale(0, 1);
+    transform-origin: center top;
+    transition: transform 0.2s;
+  }
+
+  &:hover {
+    &::after {
+      transform: scale(1, 1);
+    }
+  }
+}
+.footer-twitter {
+  &:hover {
+    opacity: 0.7;
+  }
+
+  @include g.mq(lg) {
+    width: 75px;
+    height: 75px;
+  }
+  @include g.mq(md) {
+    width: 50px;
+    height: 50px;
+  }
+  @include g.mq(sm) {
+    left: 10%;
+  }
+}
+
+.footer-copy {
+  display: block;
+  text-align: right;
+}

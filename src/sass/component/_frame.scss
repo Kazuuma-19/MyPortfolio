@@ -1,0 +1,30 @@
+/****************************************:
+
+かぎかっこあしらい
+
+*****************************************:*/
+@use "../global/index" as g;
+
+.c-frame {
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    position: absolute;
+  }
+  &::before {
+    border-left: solid 3px var(--main-green);
+    border-top: solid 3px var(--main-green);
+    top: 0;
+    left: 0;
+  }
+  &::after {
+    border-right: solid 3px var(--main-green);
+    border-bottom: solid 3px var(--main-green);
+    bottom: 0;
+    right: 0;
+  }
+}

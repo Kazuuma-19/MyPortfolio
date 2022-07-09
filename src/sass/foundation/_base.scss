@@ -1,0 +1,28 @@
+/****************************************:
+
+base
+
+*****************************************:*/
+
+@use "../global/index" as g;
+
+body {
+  color: var(--base-black);
+  counter-reset: number 0;
+}
+img {
+  width: 100%;
+}
+
+section {
+  position: relative;
+  overflow: hidden;
+}
+
+.md-break {
+  display: none;
+
+  @include g.mq(md) {
+    display: block;
+  }
+}

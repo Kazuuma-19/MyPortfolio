@@ -1,0 +1,259 @@
+/****************************************:
+
+header
+
+*****************************************:*/
+@use "../global/index" as g;
+.header {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 56px 5%;
+  z-index: 1;
+
+  @include g.mq(md) {
+    padding: 40px;
+  }
+  @include g.mq(sm) {
+    padding: 32px;
+  }
+}
+// ロゴ
+.header-logo-link {
+  font-family: "Noto Serif", serif;
+  font-style: italic;
+  color: var(--base-white);
+  font-size: 1.5rem;
+  width: 100%;
+  position: relative;
+  transform: scale(1, 1);
+  z-index: 2;
+
+  @include g.mq(md) {
+    font-size: 1.5rem;
+  }
+  @include g.mq(sm) {
+    font-size: 1rem;
+  }
+
+  &::after {
+    content: "";
+    background: var(--main-green);
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform-origin: left;
+    transition: transform 0.5s;
+  }
+
+  &:hover {
+    &::after {
+      transform: scale(0, 1);
+    }
+  }
+}
+.header-logo-link.nav-active {
+  &::after {
+    background: var(--base-white);
+  }
+}
+
+// アイテム
+.header-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 64px;
+
+  @include g.mq(xl) {
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.header-item {
+  @include g.mq(xl) {
+    font-size: 1.5rem;
+  }
+}
+.header-item-link {
+  font-family: "Noto Serif", serif;
+  font-style: italic;
+  color: var(--base-white);
+  width: 96px;
+  height: 56px;
+  line-height: 56px;
+  position: relative;
+  display: block;
+  overflow: hidden;
+
+  @include g.mq(xl) {
+    width: 144px;
+  }
+
+  &::after {
+    content: "";
+    background: var(--base-white);
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scale(0, 1);
+    transform-origin: center top;
+    transition: transform 0.5s;
+  }
+
+  &:hover {
+    &::after {
+      transform: scale(1, 1);
+    }
+
+    .header-item-sublink {
+      &:nth-child(1) {
+        top: 100%;
+      }
+
+      &:nth-child(2) {
+        top: 0;
+      }
+    }
+  }
+}
+
+.header-item-link--stress {
+  background: linear-gradient(
+    135deg,
+    rgba(229, 45, 39, 0.9) 50%,
+    rgba(179, 18, 23, 0.9)
+  );
+  border-radius: 16px;
+  padding: 0 16px;
+
+  @include g.mq(xl) {
+    background: transparent;
+    padding: 0;
+  }
+
+  &:hover {
+    &::after {
+      transform: scale(0, 1);
+
+      @include g.mq(xl) {
+        transform: scale(1, 1);
+      }
+    }
+  }
+}
+
+.header-item-sublink {
+  font-family: "Noto Serif JP", serif;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  display: block;
+  text-align: center;
+  transition: all 0.3s;
+
+  &:nth-child(1) {
+    top: 0;
+  }
+  &:nth-child(2) {
+    top: -100%;
+  }
+}
+
+// humbergerナビゲーション
+.header-nav {
+  @include g.mq(xl) {
+    background-color: #18bfa1;
+    position: fixed;
+    box-sizing: border-box;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    opacity: 0;
+    z-index: -9999;
+    overflow: scroll;
+  }
+}
+
+.header-nav.nav-active {
+  pointer-events: auto;
+  opacity: 1;
+  z-index: 1;
+  transition: opacity 0.5s;
+}
+
+// お問い合わせページheader
+.header-contact {
+  position: static;
+  background: var(--base-black);
+}
+
+// ハンバーガー
+html.nav-active {
+  overflow: auto;
+  height: 100%;
+}
+body.nav-active {
+  overflow: hidden;
+  height: 100%;
+}
+
+.humberger {
+  display: none;
+  box-sizing: border-box;
+  transition: all 0.5s;
+
+  @include g.mq(xl) {
+    display: inline-block;
+  }
+}
+
+.humberger-wrapper {
+  position: relative;
+  width: 35px;
+  height: 29px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.humberger-bar {
+  background: var(--base-white);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 3px;
+
+  &:nth-of-type(1) {
+    top: 0;
+  }
+  &:nth-of-type(2) {
+    top: 13px;
+    width: 25px;
+  }
+  &:nth-of-type(3) {
+    bottom: 0;
+  }
+}
+
+.humberger-wrapper.nav-active .humberger-bar:nth-of-type(1) {
+  transform: translateY(13px) rotate(-315deg);
+}
+.humberger-wrapper.nav-active .humberger-bar:nth-of-type(2) {
+  opacity: 0;
+}
+.humberger-wrapper.nav-active .humberger-bar:nth-of-type(3) {
+  transform: translateY(-13px) rotate(315deg);
+}

@@ -1,0 +1,51 @@
+/****************************************:
+
+smooth
+
+*****************************************:*/
+@use "../global/index" as g;
+
+.smooth {
+  font-family: "Noto Serif", serif;
+  font-style: italic;
+  font-size: 0.7rem;
+  color: var(--main-green);
+  text-align: center;
+  position: fixed;
+  top: 90%;
+  right: 10%;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s;
+
+  @include g.mq(xl) {
+    right: 5%;
+  }
+}
+
+.smooth.smooth-active {
+  opacity: 1;
+  pointer-events: auto;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.smooth-icon {
+  position: relative;
+  display: block;
+
+  &::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-top: 4px solid var(--main-green);
+    border-left: 4px solid var(--main-green);
+    position: absolute;
+    top: -20px;
+    right: 50%;
+    transform: translateX(50%) scaleY(0.9) rotate(45deg);
+  }
+}

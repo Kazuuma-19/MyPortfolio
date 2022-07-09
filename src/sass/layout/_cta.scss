@@ -1,0 +1,54 @@
+/****************************************:
+
+cta
+
+*****************************************:*/
+@use "../global/index" as g;
+
+.cta {
+  color: var(--base-white);
+  // background: url(../img/bg-cta.jpg.webp) center/cover fixed;
+  // background-size: auto;
+  // width: 100%;
+  // height: 100%;
+
+  &::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    background: url(../img/bg-cta.jpg.webp) center/cover;
+  }
+}
+
+.cta-content {
+  margin-bottom: 40px;
+
+  @include g.mq(sm) {
+    margin-bottom: 24px;
+  }
+}
+
+.cta-title {
+  font-family: "Noto Serif", serif;
+  font-style: italic;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 8px;
+
+  @include g.mq(sm) {
+    font-size: 1.5rem;
+  }
+}
+
+.cta-text {
+  font-size: 1.5rem;
+  text-align: center;
+
+  @include g.mq(sm) {
+    font-size: 1rem;
+  }
+}
