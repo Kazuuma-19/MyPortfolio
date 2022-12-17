@@ -20,8 +20,10 @@ jQuery(function ($) {
 
 // ローディング
 jQuery(function ($) {
-  var tl = gsap.timeline({});
-  var load = $("#js-load");
+  var tl = gsap.timeline({}); //loadAnimation 全体
+
+  var load = $("#js-load"); //loadAnimation 文字部分
+
   var loadContent = $("#js-load-content");
 
   var disableScroll = function disableScroll() {
@@ -32,7 +34,8 @@ jQuery(function ($) {
     $('.js-humberger-body').removeClass('nav-active');
   };
 
-  disableScroll();
+  disableScroll(); //loadAnimation
+
   var loadTxtLength = $(loadContent).find('.load-character').length;
 
   for (var index = 0; index < loadTxtLength; index++) {

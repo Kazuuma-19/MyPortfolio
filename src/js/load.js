@@ -1,7 +1,9 @@
 // ローディング
 jQuery(function ($) {
   let tl = gsap.timeline({});
+  //loadAnimation 全体
   const load = $("#js-load");
+  //loadAnimation 文字部分
   const loadContent = $("#js-load-content");
   const disableScroll = function () {
     $('.js-humberger-body').addClass('nav-active');
@@ -12,6 +14,7 @@ jQuery(function ($) {
 
   disableScroll();
 
+  //loadAnimation
   let loadTxtLength = $(loadContent).find('.load-character').length;
 
   for (let index = 0; index < loadTxtLength; index++) {

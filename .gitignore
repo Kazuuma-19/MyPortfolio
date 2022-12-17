@@ -1,5 +1,5 @@
 # ディレクトリ
-/node_modules
+node_modules/
 # ファイル
 gulpfile.js
 package-lock.json
