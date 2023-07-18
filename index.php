@@ -127,16 +127,16 @@
         <div class="works-content">
           <?php if(get_the_title() == 'Coming Soon'): ?>
           <a>
-            <?php else:  ?>
-            <!-- <a href="<?php the_permalink(); ?>"> -->
-            <?php endif; ?>
-            <?php the_post_thumbnail(null, array('class' => 'works-content-img')); ?>
-          </a>
+            <?php else: // coming soonでなければ ?>
+            <a href="<?php echo post_custom('リンク'); ?>">
+              <?php endif; ?>
+              <?php the_post_thumbnail(null, array('class' => 'works-content-img')); ?>
+            </a>
 
-          <p class="works-content-text c-vertical-bar">タイトル：<?php the_title(); ?></p>
-          <p class="works-content-text c-vertical-bar">制作期間：<?php echo post_custom('制作期間'); ?></p>
-          <p class="works-content-text c-vertical-bar">使用スキル：<?php echo post_custom('使用スキル'); ?></p>
-          <p class="works-content-text c-vertical-bar">一言：<?php echo nl2br(post_custom('一言')); ?></p>
+            <p class="works-content-text c-vertical-bar">タイトル：<?php the_title(); ?></p>
+            <p class="works-content-text c-vertical-bar">制作期間：<?php echo post_custom('制作期間'); ?></p>
+            <p class="works-content-text c-vertical-bar">使用スキル：<?php echo post_custom('使用スキル'); ?></p>
+            <p class="works-content-text c-vertical-bar">一言：<?php echo nl2br(post_custom('一言')); ?></p>
         </div>
 
         <?php
