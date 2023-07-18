@@ -79,7 +79,7 @@
             </div>
 
             <p class="promise-content-explain">
-              レスポンシブ対応、CSS設計にも注意を払いコードを書くことをお約束します。<br>
+              レスポンシブ対応、CSS設計などにも注意を払いコードを書くことをお約束します。<br>
               誰が、どの状態でサイト・コードを見ても理解できるようにすることが、サイトを見る方・修正する方にとって重要であると考えています。
             </p>
           </div>
@@ -175,7 +175,7 @@
               <p class="profile-name-jp">
                 齋藤知真
 
-                <a href="https://twitter.com/_kazuuma" class="profile-twitter">
+                <a href="https://twitter.com/kazu__tech" class="profile-twitter">
 
                   <svg class="profile-twitter-icon" height="35" viewBox="0 0 512 512" width="35"
                     xmlns="http://www.w3.org/2000/svg">
@@ -194,11 +194,11 @@
             出身：東京都
           </p>
           <p class="profile-detail c-vertical-bar">
-            趣味：ランニング、日向坂46、Macbook効率化
+            趣味：ランニング、Macbook効率化
           </p>
           <p class="profile-detail">
             ポートフォリオをご覧いただきありがとうございます。<br>
-            タイトルにもある通り、新しいことへの探求を信念に活動しています。<br>
+            タイトルにもある通り、「新しいことへの探求」を信念に活動しています。<br>
             何かございましたら、ご遠慮無くお問い合わせください。
           </p>
         </div>

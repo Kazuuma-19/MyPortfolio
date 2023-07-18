@@ -28,7 +28,7 @@
           </li>
         </ul>
 
-        <a href="https://twitter.com/_kazuuma" class="footer-twitter">
+        <a href="https://twitter.com/kazu__tech" class="footer-twitter">
           <svg class="footer-twitter-icon" height="40" viewBox="0 0 512 512" width="40"
             xmlns="http://www.w3.org/2000/svg">
             <path
