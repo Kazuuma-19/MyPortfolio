@@ -202,7 +202,7 @@
             出身：東京都
           </p>
           <p class="profile-detail c-vertical-bar">
-            趣味：ランニング、Macbook効率化
+            趣味：ランニング、サウナ、Macbook効率化
           </p>
           <p class="profile-detail">
             ポートフォリオをご覧いただきありがとうございます。<br>
