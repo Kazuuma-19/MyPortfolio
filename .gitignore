@@ -1,6 +1,1 @@
-# ディレクトリ
-node_modules/
-# ファイル
-gulpfile.js
-package-lock.json
-package.json
+/node_modules
