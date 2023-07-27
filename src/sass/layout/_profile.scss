@@ -93,7 +93,7 @@ profile
   font-style: italic;
 }
 
-.profile-twitter {
+.profile-media {
   display: block;
   margin-left: 8px;
 
@@ -132,7 +132,7 @@ profile
 .profile-skill-language {
   font-family: "Noto Serif", serif;
   font-style: italic;
-  width: 35%;
+  width: 30%;
   margin-bottom: 8px;
 
   @include g.mq(lg) {
