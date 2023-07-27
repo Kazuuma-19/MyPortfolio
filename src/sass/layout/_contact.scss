@@ -5,9 +5,12 @@ contact
 *****************************************:*/
 @use "../global/index" as g;
 
-.contact-container {
-  padding: 64px 0;
+// title
+.contact-title-wrapper {
+  text-align: left;
 }
+
+// form
 .contact-form br {
   display: none;
 }
@@ -59,9 +62,12 @@ contact
 .contact-form-input {
   background: var(--base-white);
   border: none;
+  border-radius: 0.3rem;
   box-sizing: border-box;
+
   width: 100%;
   height: 40px;
+
   padding: 0 8px;
   margin-bottom: 8px;
 
@@ -76,8 +82,11 @@ contact
 .contact-form-textarea {
   border: none;
   box-sizing: border-box;
+  border-radius: 0.3rem;
+
   width: 100%;
   height: 240px;
+
   padding: 16px;
 
   @include g.mq(md) {

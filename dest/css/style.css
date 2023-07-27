@@ -1387,8 +1387,8 @@ profile
 contact
 
 *****************************************:*/
-.contact-container {
-  padding: 64px 0;
+.contact-title-wrapper {
+  text-align: left;
 }
 
 .contact-form br {
@@ -1445,6 +1445,7 @@ contact
 .contact-form-input {
   background: var(--base-white);
   border: none;
+  border-radius: 0.3rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
@@ -1467,6 +1468,7 @@ contact
   border: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  border-radius: 0.3rem;
   width: 100%;
   height: 240px;
   padding: 16px;
