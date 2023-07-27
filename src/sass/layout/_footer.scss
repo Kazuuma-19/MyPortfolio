@@ -81,6 +81,12 @@ footer
     left: 10%;
   }
 }
+.footer-media__svg {
+  @include g.mq(sm) {
+    width: 30px;
+    height: 30px;
+  }
+}
 // copy-right
 .footer-copy {
   display: block;

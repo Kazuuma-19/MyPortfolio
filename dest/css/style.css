@@ -1315,6 +1315,18 @@ profile
 .profile-media:hover {
   opacity: 0.7;
 }
+@media screen and (max-width: 500px) {
+  .profile-media {
+    margin-left: 4px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .profile-media__svg {
+    width: 25px;
+    height: 25px;
+  }
+}
 
 .profile-twitter-icon {
   width: auto;
@@ -1355,13 +1367,13 @@ profile
 }
 @media screen and (max-width: 1080px) {
   .profile-skill-language {
-    width: 40%;
+    width: 33%;
   }
 }
 
 .profile-skill-icon {
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
 }
 @media screen and (max-width: 500px) {
   .profile-skill-icon {
@@ -1570,6 +1582,13 @@ footer
 @media screen and (max-width: 500px) {
   .footer-media {
     left: 10%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .footer-media__svg {
+    width: 30px;
+    height: 30px;
   }
 }
 

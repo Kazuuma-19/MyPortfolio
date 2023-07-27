@@ -100,6 +100,16 @@ profile
   &:hover {
     opacity: 0.7;
   }
+
+  @include g.mq(sm) {
+    margin-left: 4px;
+  }
+}
+.profile-media__svg {
+  @include g.mq(sm) {
+    width: 25px;
+    height: 25px;
+  }
 }
 
 .profile-twitter-icon {
@@ -136,13 +146,13 @@ profile
   margin-bottom: 8px;
 
   @include g.mq(lg) {
-    width: 40%;
+    width: 33%;
   }
 }
 
 .profile-skill-icon {
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
 
   @include g.mq(sm) {
     width: 60px;
